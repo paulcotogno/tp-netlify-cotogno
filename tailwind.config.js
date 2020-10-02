@@ -7,7 +7,11 @@ module.exports = {
     enabled: false,
   },
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'taupe' : '#E6833E',
+      },
+    },
   },
   variants: {},
   plugins: [],
