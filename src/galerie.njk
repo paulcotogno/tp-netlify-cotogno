@@ -5,11 +5,29 @@ eleventyNavigation:
   key: Galerie
 ---
 
-<div x-data="{open: false}">
-    <button @click="open = !open">
-        Affiche/Cache dialogue
-    </button>
-    <dialog :open="open">
-        Contenu dialogue
-    </dialog>
+<div x-data="{imageUrl: null}">
+    <ul>
+        <li><img src="/assets/images/thumbnails/animals-1.jpeg" alt="animal 1"
+                 @click="imageUrl = '/assets/images/animals-1.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-2.jpeg" alt="animal 2"
+                 @click="imageUrl = '/assets/images/animals-2.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-3.jpeg" alt="animal 3"
+                 @click="imageUrl = '/assets/images/animals-3.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-4.jpeg" alt="animal 4"
+                 @click="imageUrl = '/assets/images/animals-4.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-5.jpeg" alt="animal 5"
+                 @click="imageUrl = '/assets/images/animals-5.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-6.jpeg" alt="animal 6"
+                 @click="imageUrl = '/assets/images/animals-6.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-7.jpeg" alt="animal 7"
+                 @click="imageUrl = '/assets/images/animals-7.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-8.jpeg" alt="animal 8"
+                 @click="imageUrl = '/assets/images/animals-8.jpeg';"></li>
+        <li><img src="/assets/images/thumbnails/animals-9.jpeg" alt="animal 9"
+                 @click="imageUrl = '/assets/images/animals-9.jpeg';"></li>
+    </ul>
+
+    <div x-show="!!imageUrl" @click.away=""imageUrl="null">
+        <img :src="imageUrl" alt="">
+    </div>
 </div>
