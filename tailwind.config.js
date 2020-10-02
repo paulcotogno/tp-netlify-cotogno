@@ -11,6 +11,9 @@ module.exports = {
       'display': ['Oswald', 'Open Sans'],
     },
     extend: {
+      screens:{
+        'portrait': {'raw': '(orientation: portrait)'},
+      },
       colors:{
         'taupe' : '#E6833E',
       },
