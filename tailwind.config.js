@@ -7,6 +7,9 @@ module.exports = {
     enabled: false,
   },
   theme: {
+    fontFamily: {
+      'display': ['Oswald', 'Open Sans'],
+    },
     extend: {
       colors:{
         'taupe' : '#E6833E',
